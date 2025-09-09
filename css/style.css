@@ -1,77 +1,23 @@
-/* Reset and fonts */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f8f9fa;
-  color: #333;
-}
-
-/* Header styling */
-.site-header {
-  background: linear-gradient(120deg, #4CAF50, #2E7D32);
+.site-footer {
+  background: #333;
+  /* match header */
   color: white;
-  padding: 20px;
   text-align: center;
-  position: relative;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
 }
 
-.site-header .logo {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  height: 50px;
-}
-
-.site-title {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/* Content styling */
-.content {
-  padding: 30px;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* Card grid for parts */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 15px;
-}
-
-.card-body h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-}
-
-.card-body a {
+.site-footer a {
+  color: #f4d03f;
+  /* gold/yellow highlight */
   text-decoration: none;
-  color: #4CAF50;
-  font-weight: bold;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer .contact {
+  margin-top: 1rem;
+  font-size: 0.9rem;
 }

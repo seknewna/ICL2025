@@ -14,9 +14,14 @@
   <main class="content">
     {{ content }}
   </main>
-</body>
 
-<footer>
-  <p>© 2025 {{ page.author }}</p>
-</footer>
+  <footer class="site-footer">
+    <p>© 2025 {{ page.author | default: "Your Name" }}</p>
+    <div class="contact">
+      <p><strong>Contact:</strong></p>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/seknewna" target="_blank">github.com/seknewna</a></p>
+    </div>
+  </footer>
+</body>
 </html>
