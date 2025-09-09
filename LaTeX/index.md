@@ -57,3 +57,7 @@ The parameter `option` is optional. Common options are:
 | `openright`  | Chapters start on right-hand pages (for `report`/`book`)                   |
 | `landscape`  | Rotate pages to landscape orientation                                       |
 
+
+<iframe src="{{ '/LaTeX/files/Intro_Latex.pdf' | relative_url }}" 
+        width="100%" height="600px" style="border:1px solid #ccc;">
+</iframe>
