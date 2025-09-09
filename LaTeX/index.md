@@ -7,7 +7,23 @@ title: Introduction to LaTeX
 
 ## Overview
 
-Welcome to this the **part 2** of this course. Here, you will learn how to typeset documents (articles, reports, books, letters and beamers a.k.a. classes) using LaTeX. You'll mainly codes and texts and when compiled they render well formated documents. One needs to know a couple of commands to make a document look good. No worries here! You don't have to memorize everything since we have nice interfaces such as [texstudio](), [texmaker]() and the online most used one [overleaf](overleaf.com)
+Welcome to the **part 2** of this course. Here, you will learn how to typeset documents (articles, reports, books, letters and beamers a.k.a. classes) using LaTeX. You'll mainly codes and texts and when compiled they render well formated documents. One needs to know a couple of commands to make a document look good. No worries here! You don't have to memorize everything since we have nice interfaces such as [texstudio](https://www.texstudio.org/), [texmaker](https://www.xm1math.net/texmaker/download.html) and the online most used one [overleaf](https://overleaf.com).
+
+
+### Installion (texlive)
+
+* [Windows](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe)
+* Mac: 
+```bash
+brew update
+brew upgrade
+brew install --cask mactex
+```
+* Linux
+```bash
+sudo apt-get update
+sudo apt-get install texlive-full
+```
 
 ### How do we start a LaTeX document?
 
