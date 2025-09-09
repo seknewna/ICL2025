@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Introduction to `bash` commands
-author: Dr Lema LOGAMOU SEKNEWNA
+title: Introduction to R Programming
 ---
 
 ## Chapter 1

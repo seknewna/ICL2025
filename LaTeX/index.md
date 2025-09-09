@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Introduction to `LaTeX`
-author: Dr Lema LOGAMOU SEKNEWNA
+title: Introduction to LaTeX
 ---
 
 ## Chapter 1
