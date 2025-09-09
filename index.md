@@ -6,6 +6,7 @@ author: Dr. Lema LOGAMOU SEKNEWNA
 
 ## Parts
 
+<div class="cards">
 <div class="card">
   <img src="{{ '/images/part1.png' | relative_url }}" alt="Part 1">
   <div class="card-body">
