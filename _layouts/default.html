@@ -1,29 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
 </head>
 <body>
+  <!-- Hero / header -->
   <header class="site-header">
-    <img src="{{ '/images/logo.png' | relative_url }}" alt="Logo" class="logo">
-    <h1 class="site-title">{{ page.title }}</h1>
+    <div class="hero">
+      <img src="{{ '/images/logo.png' | relative_url }}" alt="Logo" class="logo">
+      <div class="hero-text">
+        <div class="site-name">{{ site.title }}</div>
+        <h1 class="page-title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+          <p class="subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+      </div>
+    </div>
   </header>
 
   <main class="content">
     {{ content }}
   </main>
-</body>
 
-<footer class="site-footer">
-    <p>© 2025 {{ page.author | default: "Your Name" }}</p>
-    <div class="contact">
-      <p><strong>Contact:</strong></p>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/seknewna" target="_blank">github.com/seknewna</a></p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="copyright">© {{ "now" | date: "%Y" }} {{ page.author | default: site.author }}</div>
+      <div class="contact">
+        <strong>Contact:</strong>
+        <a href="mailto:your.email@example.com">your.email@example.com</a> ·
+        <a href="https://github.com/seknewna" target="_blank" rel="noopener">github.com/seknewna</a>
+      </div>
     </div>
-</footer>
-
+  </footer>
+</body>
 </html>
