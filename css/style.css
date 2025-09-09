@@ -12,7 +12,7 @@ body {
 
 /* HERO / HEADER */
 .site-header .hero {
-  background: linear-gradient(120deg, #0f172a, #f19c6fd9);
+  background: linear-gradient(120deg, #f19c6fd9, #f19c6fd9);/* #0f172a */
   color: #fff;
   padding: 36px 16px;
   text-align: center;
