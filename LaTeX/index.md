@@ -7,14 +7,14 @@ title: Introduction to LaTeX
 
 ## Overview
 
-Welcome to this the **part 2** of this course. Here, you will learn how to typeset documents (articles, reports, books, letters and beamers a.k.a. classes) using LaTeX. It's meaning codes and when compiled renders well formated document. One need to know couple of command to make a document look good. 
+Welcome to this the **part 2** of this course. Here, you will learn how to typeset documents (articles, reports, books, letters and beamers a.k.a. classes) using LaTeX. You'll mainly codes and texts and when compiled they render well formated documents. One needs to know a couple of commands to make a document look good. No worries here! You don't have to memorize everything since we have nice interfaces such as [texstudio](), [texmaker]() and the online most used one [overleaf](overleaf.com)
 
 ### How do we start a LaTeX document?
 
 We start a LaTeX document with:
 
 ```latex
-\documentclass[options]{article} % write an article
+\documentclass[options]{article} % to write an article
 ```
 
 The parameter `option` is optional. Common options are:

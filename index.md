@@ -8,7 +8,7 @@ author: Dr. Lema LOGAMOU SEKNEWNA
 
 <div class="cards">
 <div class="card">
-  <img src="{{ '/images/part1.png' | relative_url }}" alt="Part 1">
+  <img src="{{ '/images/part1.png' | relative_url }}" alt="Bash">
   <div class="card-body">
     <h3>Linux & Bash commands</h3>
     <a href="{{ '/Bash/index.md' | relative_url }}">Go to the course</a>
@@ -16,7 +16,7 @@ author: Dr. Lema LOGAMOU SEKNEWNA
 </div>
 
 <div class="card">
-  <img src="{{ '/images/part2.jpg' | relative_url }}" alt="Part 2">
+  <img src="{{ '/images/part2.jpg' | relative_url }}" alt="LaTeX">
   <div class="card-body">
     <h3>Introduction to LaTeX</h3>
     <a href="{{ '/LaTeX/index.md' | relative_url }} ">Go to the course</a>
@@ -25,7 +25,7 @@ author: Dr. Lema LOGAMOU SEKNEWNA
 
 
 <div class="card">
-  <img src="{{ '/images/part3.jpg' | relative_url }}" alt="Part 3">
+  <img src="{{ '/images/part3.jpg' | relative_url }}" alt="R">
   <div class="card-body">
     <h3>R Programming</h3>
     <a href="{{ '/R/index.md' | relative_url }}">Go to the course</a>
