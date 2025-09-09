@@ -48,3 +48,11 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+_layouts/
+
+# RStudio files
+.Rproj.user/
+*.Rproj
+
+images/
+css/
