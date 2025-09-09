@@ -16,7 +16,7 @@ author: Dr. Lema LOGAMOU SEKNEWNA
 </div>
 
 <div class="card">
-  <img src="{{ '/images/part2.png' | relative_url }}" alt="LaTeX">
+  <img src="{{ '/images/part1.png' | relative_url }}" alt="LaTeX">
   <div class="card-body">
     <h3>Introduction to LaTeX</h3>
     <a href="{{ '/LaTeX/' | relative_url }} ">Go to the course</a>
