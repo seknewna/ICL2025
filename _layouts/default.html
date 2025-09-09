@@ -6,11 +6,17 @@
   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
 </head>
 <body>
-  {{ content }}
+  <header class="site-header">
+    <img src="{{ '/images/logo.png' | relative_url }}" alt="Logo" class="logo">
+    <h1 class="site-title">{{ page.title }}</h1>
+  </header>
+
+  <main class="content">
+    {{ content }}
+  </main>
 </body>
 
 <footer>
   <p>© 2025 {{ page.author }}</p>
 </footer>
-
 </html>
