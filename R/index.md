@@ -5,6 +5,3 @@ author: Dr Lema LOGAMOU SEKNEWNA
 ---
 
 ## Chapter 1
-
-
-## Chapter 2

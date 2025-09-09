@@ -1,7 +1,7 @@
 ---
 layout: default
 title: INTRODUCTION TO COMPUTING & LATEX COURSE
-author: Dr Lema LOGAMOU SEKNEWNA
+author: Dr. Lema LOGAMOU SEKNEWNA
 ---
 
 ## Parts
