@@ -1,1 +1,1 @@
-# Introduction-to-Computing-and-LaTeX
+# Introduction to Computing and LaTeX
