@@ -1,4 +1,7 @@
-# Introduction to `bash` commands
+---
+layout: default
+title: Introduction to `bash` commands
+---
 
 ## Chapter 1
 
