@@ -35,7 +35,7 @@ We start a LaTeX document with:
 
 The parameter `option` is optional. Common options are:
 
-| Option       | Description                                                                 |
+|Option       |Description                                                                 |
 |--------------|-----------------------------------------------------------------------------|
 | `10pt`       | Default font size (10 points)                                               |
 | `11pt`       | Font size 11 points                                                         |
