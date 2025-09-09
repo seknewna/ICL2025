@@ -14,13 +14,13 @@ Welcome to the **part 2** of this course. Here, you will learn how to typeset do
 
 * [Windows](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe)
 * Mac: 
-```bash
+```
 brew update
 brew upgrade
 brew install --cask mactex
 ```
 * Linux
-```bash
+```
 sudo apt-get update
 sudo apt-get install texlive-full
 ```
@@ -29,7 +29,7 @@ sudo apt-get install texlive-full
 
 We start a LaTeX document with:
 
-```latex
+```
 \documentclass[options]{article} % to write an article
 ```
 
