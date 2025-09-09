@@ -10,6 +10,6 @@ R a statistical programming language created in 1992 by two statisticians from t
 
 Read more from the following file
 
-<iframe src="{{ './files/Intro_R.pdf' | relative_url }}" 
+<iframe src="{{ '/R/files/Intro_R.pdf' | relative_url }}" 
         width="100%" height="600px" style="border:1px solid #ccc;">
 </iframe>
