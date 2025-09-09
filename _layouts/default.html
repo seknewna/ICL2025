@@ -21,9 +21,16 @@
     </div>
   </header>
 
-  <main class="content">
-    {{ content }}
-  </main>
+   <div class="container">
+    <nav class="sidebar">
+      <h3>Table of Contents</h3>
+      {{ content | toc }}
+    </nav>
+
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
 
   <footer class="site-footer">
     <div class="footer-inner">
