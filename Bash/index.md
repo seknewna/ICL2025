@@ -105,3 +105,12 @@ chmod +x script.sh
 * Use Ctrl+C to stop a running command.
 
 * Use man <command> to read the manual: man ls.
+
+<iframe src="{{ '/Bash/files/ICL2025_W1D1_Linux_commands.pdf' | relative_url }}" 
+        width="100%" height="600px" style="border:1px solid #ccc;">
+</iframe>
+
+
+<iframe src="{{ '/Bash/files/Linux_Bash_Scripting.pdf' | relative_url }}" 
+        width="100%" height="600px" style="border:1px solid #ccc;">
+</iframe>
