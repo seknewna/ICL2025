@@ -132,4 +132,287 @@ hist(x_pois, col = "pink")
 abline(v = mean(x_pois), col = "red", lwd = 2, lty = 2)
 ```
 
+## Lists
+
+
+## Arrays (vectors - 1D, matrives - 2D, ND)
+### Matrices
+```{r}
+# use dim to reshape a ID to 2D
+v <- 1:9
+dim(v) <- c(3, 3)
+v
+
+# use matrix() to create a matrix
+(M1 <- matrix(1:9, nrow = 3)) # byrow = F by default.
+(M2 <- matrix(1:9, nrow = 3, byrow = T)) # byrow = F by default.
+```
+
+M2 and M1 transpose of each other.
+
+```{r}
+all((t(M2) == M1) == T) # isTRUE
+identical(t(M2), M1)
+```
+
+* Indexing and slicing
+```{r}
+set.seed(123)
+(v <- sample(100, size = 9))
+v[1] # prints the 1st element of v
+v = v[-1] # drops the fist element
+v[length(v)]
+```
+
+```{r}
+v[v == 50]
+v[which(v == 50)]
+```
+
+```{r}
+v
+v > 50
+v[v > 50]
+```
+
+```{r}
+M2[3, -1] # delete the first element of the 3rd row.
+M2[, -1] # drops the first column of M2
+M2[-2, ]
+M2[1,1] # print the element at row 1 and col 1
+M2
+```
+
+
+```{r}
+set.seed(123)
+v[sample(length(v), 3)] <- NA
+v
+
+# use is.na(v) test if a value in v is missing
+v[is.na(v)] <- round(mean(v, na.rm = TRUE), 2)
+```
+
+```{r}
+v
+```
+
+## Operations on matrices
+```{r}
+A <- matrix(c(3, 1, 0, 0, -1, 5, 7, 8, 1), ncol = 3, byrow = TRUE)
+set.seed(123)
+B <- matrix(round(runif(9), 2), ncol = 3) # runif generate a sample from uniform dist.
+A; B
+```
+
+```{r}
+# add
+A + B
+
+# element-wise multiplication
+A * B
+
+# element-wise subtraction
+A - B
+
+# element-wise division
+A / B
+
+# matrix multiplication (dot product)
+A %*% A # not (A^2 which is element-wise exponentiation)
+
+Ainv <- solve(A)
+round(Ainv %*% A, 10)
+```
+
+
+```{r}
+A2 <- matrix(c(1, 1, 1, -1), nrow = 2, byrow = TRUE)
+b <- c(2, 0)
+solve(A2, b)
+```
+
+# Eigen values -vectors
+```{r}
+evA <- eigen(A)
+evA$values
+evA$vectors
+```
+
+## Lists
+```{r}
+mylist <- list(matrix = A, bool = is.matrix(A), data = head(iris, 3))
+# iris is an inbuilt dataset. Use ?iris to check the documentation of iris.
+print(mylist)
+```
+
+```{r}
+mylist$matrix[3, 2]
+
+# write a code that will print the last setosa from mylist.
+n <- nrow(mylist$data)
+p <- ncol(mylist$data)
+n; p
+
+mylist$data[n, p]
+
+mylist$data$Sepal.Width[2]
+```
+
+
+## Data frames
+```{r}
+head(iris)
+?data # help("iris")
+```
+
+## Data Exploration
+```{r}
+# data dimensions
+dim(iris) # iris is already existing (inbuilt data)
+
+paste("Lema", "Logamou")
+cat(paste0("Lema", "Logamou"))
+
+cat(paste0("My iris data has ", dim(iris)[1], " rows and ", dim(iris)[2], " columns.\n"))
+
+cat("My iris data has", nrow(iris), "rows and", ncol(iris), "columns.")
+
+
+# data structure
+str(iris)
+as.character(iris$Species)
+
+# data summary
+summary(iris$Sepal.Length)
+# summary of categorical variable is just like table()
+summary(iris$Species)
+# proportion table
+prop.table(summary(iris$Species)) # table(iris$Species)
+
+iris$new_column <- NA # adding a new_column.
+head(iris)
+View(iris)
+
+iris$new_column <- NULL # drops the new_column
+iris_clean <- iris[, -ncol(iris)] # deletes the last column of iris
+
+names(iris)
+
+iris[-(1:ncol(iris))]
+
+idx_pl <- which(names(iris) == "Petal.Length")
+iris[-idx_pl]
+```
+
+
+### Column(s) selection
+```{r}
+iris[c("Petal.Length", "Species")]
+iris[["Petal.Length"]]
+
+attach(iris)
+Species
+Sepal.Length
+detach(iris)
+
+# names(iris) <- edit(names(iris))
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Spe cies")
+
+attach(iris)
+unique(`Spe cies`)
+detach(iris)
+
+iris[c(1:4)]
+iris[, -3]
+```
+
+### Subsetting or filtering
+```{r}
+# rm(iris)
+(iris_setosa <- iris[iris$Species == "setosa", ])
+
+(sepal_length_setosa <- iris[iris$Species == "setosa", "Sepal.Length"])
+```
+
+Filtering data for Sepal.Length > 3.0 for setosa species.
+```{r}
+iris[iris$Sepal.Length > 3 & iris$Species == "setosa", ]
+```
+
+
+Filtering data for Sepal.Length between 3.0 and 5.0 for all species.
+```{r}
+iris[iris$Sepal.Length >= 3 & iris$Sepal.Length <= 5, ]
+
+# We can also use the subset function to do the filtering in R
+subset1 <- subset(iris, Sepal.Length >= 3 & Sepal.Length <= 5)
+# Later we'll explore the function filter from the tidyverse, dplyr library.
+
+
+# number of obs. in subset1
+nrow(subset1)
+dim(subset1)[1]
+```
+
+Only `r dim(subset1)[1]` flowers have their sepal length between 3 and 5 in the iris data.
+
+## Importing `csv` data in R
+```{r}
+# getwd() # gets the path of the working directory
+# setwd() # sets the working directory. You need to give it a new path.
+dir("../data")
+
+rw_data0 <- read.csv("../data/rwa_admpop_adm1_2023.csv") # if the folder data is in parent folder.
+rw_data1 <- read.csv("./data/rwa_admpop_adm1_2023.csv", skip = 4, na.strings = c("?", "NULL")) # if the folder data is in the current working directory.
+head(rw_data1)
+
+View(rw_data1)
+```
+
+
+## Pipe: |> or %>%
+
+$$f(g(h(x)))$$
+$$x \quad |> h()\quad |> g()\quad |> f()$$
+
+## Import a package in R
+```{r}
+# Install a package in R
+# install.packages("tidyverse") # always comment after installing a package.
+library(dplyr)
+
+set.seed(123)
+v <- rnorm(100)
+v %>% mean() # this is exactly mean(v)
+v %>% mean(na.rm = TRUE) %>% round(2) %>% abs
+```
+
+Using %>% print the structure of the data set we've imported
+```{r}
+rw_data1 %>% str()
+```
+
+## Pivoting
+```{r}
+# install.packages("reshape2")
+library(reshape2)
+library(dplyr)
+# names(rw_data1) %>% edit()
+rw_data_cleaned <- rw_data1 %>% 
+  # dropping some columns such as year, ISO3, ADM0_PCODE
+  select(-year, -ISO3, -ADM0_PCODE, -ADM0_FR, -ADM1_PCODE) %>% 
+  # pivoting from wide format to long format.
+  melt(id.vars = c("ADM1_FR")) %>% 
+  # rename the column ADM1_FR to "Province".
+  rename("Province" = ADM1_FR, Population = value) %>% 
+  filter(!grepl("_TL|T_", variable)) %>% 
+  # creating a new column: Gender
+  mutate(Gender = substr(variable, 1, 1))
+  
+# decode the variable Gender so that F becomes Female and M becomes Male.
+str_sub(rw_data_cleaned$variable, 1, 1)
+```
+
+
 [Online material](https://rpubs.com/seknewna/IntroR_Lema)

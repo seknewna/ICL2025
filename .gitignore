@@ -53,3 +53,7 @@ _layouts/
 # RStudio files
 .Rproj.user/
 *.Rproj
+
+
+Zoom/
+Data/
